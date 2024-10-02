@@ -1,2 +1,197 @@
-# inicio
-Isto é um teste
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Welcome to Our Website</h1>
+            <p>Your success is our priority</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of dedicated professionals committed to delivering top-notch solutions.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Service One</h3>
+            <p>Description of service one.</p>
+        </div>
+        <div class="service">
+            <h3>Service Two</h3>
+            <p>Description of service two.</p>
+        </div>
+        <div class="service">
+            <h3>Service Three</h3>
+            <p>Description of service three.</p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-item">
+            <img src="portfolio1.jpg" alt="Portfolio Item 1">
+            <p>Project description.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio2.jpg" alt="Portfolio Item 2">
+            <p>Project description.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio3.jpg" alt="Portfolio Item 3">
+            <p>Project description.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #555;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about {
+    background: #f4f4f4;
+}
+
+#services {
+    background: #fff;
+}
+
+#portfolio {
+    background: #f4f4f4;
+}
+
+#contact {
+    background: #fff;
+}
+
+.service, .portfolio-item {
+    margin: 20px 0;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
