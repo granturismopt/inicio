@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml/">
+<head>
+  <title>PSN ID Form</title>
+  <script type="text/javascript">
+    function openTabs() {
+      var psnId = document.getElementById('psnId').value;
+      if (psnId) {
+        var url1 = 'http://gtgopher.ddns.net/current?psn=' + psnId;
+        var url2 = 'https://dg-edge.com/players/' + psnId;
+        window.open(url1, '_blank');
+        window.open(url2, '_blank');
+      } else {
+        alert('Please enter your PSN ID.');
+      }
+    }
+  </script>
+</head>
+
+<body id="page" style="position:relative; background:url('images/page_bg.png') 0 0 repeat; font-family:Arial, Helvetica, sans-serif; line-height:170%; color:#646464; font-size:12px;">
+
+<!-- page setup -->
+<div id="pagebg" style="background:url('images/bodytop_line.png') 0 0 repeat-x;">
+
+  <!-- wrapper -->
+  <div class="rapidxwpr floatholder" style="margin:auto; width:980px;">
+  
+    <!-- header -->
+    <div id="header" style="position:relative; height:160px; margin:0px 0px 0px 0px;">
+    
+      <!-- logo -->
+      <a href="index.html"><img id="logo" src="images/logo.png" alt="Home" title="Home" style="position:absolute; top:53px; left:0; width:327px; height:54px; border:0;" /></a>
+      <!-- / logo -->
+      
+      <!-- rss -->
+      <a href="index.html"><img id="rss" class="correct-png" src="images/rss_img.png" alt="rss" title="rss" style="border:0; float:right; margin:0 10px 0 0;" /></a>
+      <!-- / rss -->
+      
+      <!-- tagline -->
+      <div id="tagline" style="float:right; margin:60px 35px 0 0; background:url('images/tagleft_bg.png') 0 0 no-repeat; padding:5px 30px 9px 30px;">
+        <span style="font-size:13px; font-weight:bold; color:#000;">The best of the best in design from around the world</span>
+      </div>
+      <!-- / tagline -->
+    
+    </div>
+    <!-- / header -->
+    
+    <!-- main body -->
+    <div id="middle" style="width:auto; margin:0px 0px 0px 0px; clear:both;">
+    
+      <!-- PSN ID Form -->
+      <div id="psn_form" class="clearingfix" style="display:block; margin:35px 0;">
+        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">Enter Your PSN ID</h2>
+        <form onsubmit="openTabs(); return false;" style="margin:14px 0 0 0;">
+          <label for="psnId" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">PSN ID:</label>
+          <input type="text" id="psnId" name="psnId" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+          <input type="submit" value="Submit" style="border:0; padding:10px 20px; margin-top:10px; background:#1E90FF; color:#fff; cursor:pointer; font-size:14px; font-weight:bold;" />
+        </form>
+      </div>
+      <!-- / PSN ID Form -->
+    
+    </div>
+    <!-- / main body -->
+  
+  </div>
+  <!-- / wrapper -->
+
+</div>
+<!-- / page setup -->
+
+<!-- footer -->
+<div id="footer" style="width:auto; padding:70px 0px 20px 0px; clear:both; color:#fff; background:url('images/footer_bg.png') 0 0 repeat-x; overflow:hidden;">
+  <div class="rapidxwpr floatholder" style="margin:auto; width:980px;">
+  
+    <!-- copyright -->
+    <div class="copyright" style="width:490px; float:left;">
+      <p style="color:white;">&#169; Copyright. <script type="text/javascript">document.write(new Date().getFullYear());</script>. <a href="https://www.opensourcetemplates.org/index.html" style="color:#0bcbf6; text-decoration:none;">Open Source Website Templates</a>. All Rights Reserved. <a href="https://www.opensourcetemplates.org/terms.html" style="color:#0bcbf6; text-decoration:none;">Terms</a> | <a href="https://www.opensourcetemplates.org/sitemap.html" style="color:#0bcbf6; text-decoration:none;">Site Map</a> | <a href="https://themeruler.com/" style="color:#0bcbf6; text-decoration:none;">More Themes</a></p>
+    </div>
+    <!-- / copyright -->
+    
+    <!-- contact form -->
+    <div class="footer-contact" style="padding:23px 0 0 0; float:right; width:460px;">
+      <h3 style="color:#5496b4; font-size:16px; margin:0 0 0 10px; font-style:italic; font-weight:normal; background:url('images/footer-contact.png') 0 0 repeat-x; padding:2px 10px 3px 10px; float:left;">Drop us a line</h3>
+      <form action="" method="get" style="clear:both; padding:10px 0 0 0;">
+        <div style="width:200px; float:left; padding:0 15px;">
+          <label for="name" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Name:</label><input type="text" name="name" class="contact-field" value="" tabindex="1" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+          <label for="email" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">E-mail:</label><input type="text" name="email" class="contact-field" value="Example Text" tabindex="2" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+          <label for="subject" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Regarding:</label><input type="text" name="subject" class="contact-field" value="" tabindex="3" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+        </div>
+        <div style="width:200px; float:left; padding:0 15px;">
+          <label for="message" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Message:</label><textarea name="message" class="contact-message" tabindex="4" rows="10" cols="10" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b; height:77px;">Example Text</textarea>
+          <input type="submit" name="submit" class="contact-submit" value="" tabindex="5" style="border:0; padding:0; width:98px; height:40px; text-indent:-9999px; cursor:pointer; background:url('images/contact-submit.png') 0 0 no-repeat; margin:10px -10px 0 0; float:right;" />
+        </div>
+      </form>
+    </div>
+    <!-- / contact form -->
+  
+  </div>
+</div>
+<!-- / footer -->
+
+</body>
+</html>
