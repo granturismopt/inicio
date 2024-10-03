@@ -3,57 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esports Team Landing Page</title>
+    <title>Intranet Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: 100%;">
 
-    <!-- Hero Banner -->
-    <section id="hero" style="background: url('hero-background.jpg') no-repeat center center/cover; color: #fff; text-align: center; padding: 100px 20px;">
-        <h1 style="margin: 0; font-size: 3em;">Welcome to Our Esports Team</h1>
-        <p style="font-size: 1.5em;">Join us in our journey to victory!</p>
-    </section>
+    <div class="wrapper" style="height: 100%;">
+        <!-- Header -->
+        <header id="nav" role="banner" style="float: left; position: relative; width: 100%; background: #1E90FF; box-shadow: 0px 1px 3px #333; z-index: 1;">
+            <nav role="navigation" style="margin: auto; width: 100%; max-width: 960px;">
+                <i class="fa fa-gamepad" style="display: block; float: left; margin-left: .25em; font-size: 3em; color: #fff; cursor: pointer;"></i>
+                <input type="checkbox" id="nav-check" style="display: none;" />
+                <ul class="nav" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-end; list-style-type: none; margin: 0; padding: 0;">
+                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Home</a></li>
+                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Games</a></li>
+                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Events</a></li>
+                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">News</a></li>
+                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Contacts</a></li>
+                    <li><a href="#" class="fa fa-search" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;"></a></li>
+                </ul>
+                <label class="fa fa-bars" for="nav-check" style="display: none; font-size: 2.5em; cursor: pointer;"></label>
+            </nav>
+        </header>
 
-    <!-- Drivers Content Block -->
-    <section id="drivers" style="padding: 60px 20px; text-align: center; background: #f4f4f4;">
-        <h2 style="margin: 0;">Our Drivers</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
-            <!-- Repeat this block for each driver -->
-            <div style="flex: 1 1 calc(25% - 40px); background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <img src="driver1.jpg" alt="Driver 1" style="width: 100%; border-radius: 10px;">
-                <h3 style="margin: 10px 0 0;">Driver Name 1</h3>
+        <!-- Intro Section -->
+        <section class="sec-intro" style="padding-top: 0;">
+            <div class="row" style="margin: auto; width: 100%; max-width: 960px;">
+                <img src="http://games.mxdwn.com/wp-content/uploads/2014/06/evil-within-4.jpg" alt="The Evil Within picture" style="float: left; width: 50%; height: 480px; vertical-align: top;">
+                <img src="http://data.techtimes.com/data/images/full/14561/batman-arkham-knight-gamescom-3-jpg.jpg" alt="Batman: Arkham Knigh picture" style="float: left; width: 50%; height: 480px; vertical-align: top;">
             </div>
-            <!-- Add more driver blocks here -->
-        </div>
-    </section>
-
-    <!-- Championships Content Block -->
-    <section id="championships" style="padding: 60px 20px; text-align: center; background: #fff;">
-        <h2 style="margin: 0;">Championships</h2>
-        <ul style="list-style: none; padding: 0; margin-top: 20px;">
-            <!-- Repeat this block for each championship -->
-            <li style="background: #f4f4f4; margin: 10px 0; padding: 20px; border-radius: 10px;">
-                Championship Name 1
-            </li>
-            <!-- Add more championship blocks here -->
-        </ul>
-    </section>
-
-    <!-- Sponsors Content Block -->
-    <section id="sponsors" style="padding: 60px 20px; text-align: center; background: #f4f4f4;">
-        <h2 style="margin: 0;">Our Sponsors</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
-            <!-- Repeat this block for each sponsor -->
-            <div style="flex: 1 1 calc(20% - 40px); background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                <img src="sponsor1.jpg" alt="Sponsor 1" style="width: 100%; border-radius: 10px;">
+            <div class="row" style="margin: auto; width: 100%; max-width: 960px;">
+                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
+                    <img src="http://www.dlcompare.com/img/call-of-duty-advanced-warfare-img-4.jpg" alt="Call of Duty: Advanced Warfare" style="width: 100%; height: 200px;">
+                </div>
+                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
+                    <img src="http://static1.gamespot.com/uploads/original/917/9176928/2556601-0980017126-diablo.jpeg" alt="Diablo 3: Reaper of Souls" style="width: 100%; height: 200px;">
+                </div>
+                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
+                    <img src="http://s3.goodfon.su/wallpaper/previews-middle/668024.jpg" alt="Metro: Last Light - Redux" style="width: 100%; height: 200px;">
+                </div>
+                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
+                    <img src="http://static.gamespot.com/uploads/original/1535/15354745/2420857-2571372632-Dark-.jpg" alt="Dark Souls 2" style="width: 100%; height: 200px;">
+                </div>
             </div>
-            <!-- Add more sponsor blocks here -->
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer style="background: #333; color: #fff; text-align: center; padding: 20px 0;">
-        <p style="margin: 0;">&copy; 2024 Esports Team. All rights reserved.</p>
-    </footer>
+        <!-- Posts Section -->
+        <section class="sec-posts" style="margin-bottom: 1em;">
+            <div class="row" style="margin: auto; width: 100%; max-width: 960px; border-top: .1em dashed #aaa;">
+                <div class="col-2" style="display: inline-block; width: 49%; min-width: 300px; vertical-align: top;">
+                    <h2 style="padding: 0 .25em;">Latest Posts</h2>
+                    <article class="post" style="padding: 0 .5em;">
+                        <img src="https://s3.amazonaws.com/ksr/projects/270437/photo-main.jpg?1397791154" alt="Planetary Annihilation picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
+                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Planetary Annihilation</h1>
+                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">Colonize solar systems, annihilate homeworlds, and exterminate your foes in epic interplanetary battles with multiple players and thousands of units. Planetary Annihilation is a next-generation RTS that takes the genre to a planetary scale.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
+                    </article>
+                    <article class="post" style="padding: 0 .5em;">
+                        <img src="http://im.tiscali.cz/games/2013/09/25/321029-swapperpoutak-653x367.jpg" alt="The Swapper picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
+                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">The Swapper</h1>
+                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">The Swapper features a unique art style that uses real-world clay-models and found objects to create an explorable space station realised in unique detail; gameplay sees players swap between different bodies to achieve otherwise impossible tasks.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
+                    </article>
+                    <article class="post" style="padding: 0 .5em;">
+                        <img src="http://86bb71d19d3bcb79effc-d9e6924a0395cb1b5b9f03b7640d26eb.r91.cf1.rackcdn.com/wp-content/uploads/2014/05/wolfenstein-the-new-order-walkthrough.jpg" alt="Wolfenstein: The New Order picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
+                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Wolfenstein: The New Order</h1>
+                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">1946: Europe. World War II rages on across Europe. Where the Allies once pressed advantage, the Nazi forces have turned the tide in dramatic fashion behind the technologically advanced war machine of General Wilhelm Strasse, aka Deathshead.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
+                    </article>
+                    <button type="button" value="See more" role="button" style="margin-left: .5em; padding: .5em 0; width: 100px; text-transform: uppercase; background: #fff; color: #1E90FF; border: .1em solid; outline: 0; transition: color .25s;">See more</button>
+                </div>
+                <div class="col-2" style="display: inline-block; width: 49%; min-width: 300px; vertical-align: top;">
+                    <h2 style="padding: 0 .25em;">Popular Posts</h2>
+                    <article class="post" style="padding: 0 .5em;">
+                        <img src="http://nilsenreport.ca/wp-content/uploads/2014/08/NHL15.jpg" alt="NHL 15 picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
+                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">NHL 15</h1>
+                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">The Skill Stick purports to give more control to the player. Protect the puck, receive passes without breaking stride, and discover an arsenal of sweet new dekes, all with an intuitive right stick control scheme. The game features Doc Emrick and more.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
+                    </article>
+                    <article class="post" style="padding: 0 .5em;">
+                        <img src="http://static.trustedreviews.com/94/00002d149/a4fb/Destiny.jpg" alt="Destiny picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
+                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Destiny</h1>
+                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">In Destiny (from the creators of Halo) you are a Guardian of the last city on Earth. You are able to wield incredible power. Explore the ancient ruins of our solar system, from the vast dunes of Mars to the lush jungles of Venus. Defeat Earth’s enemies.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
+                    </article>
+                    <article class="post" style="padding: 0 .5em;">
+                        <img src="http://wac.450f.edgecastcdn.net/80450F/screencrush.com/files/2013/11/Middle-Earth-Shadow-of-Mordor-Warner-Bros-Interactive.jpg" alt="Middle-earth: Shadow of Mordor picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
+                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Middle-earth: Shadow of Mordor</h1>
+                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">Fight your way through Mordor and reveal the truth of the spirit that compels you, discover the origins of the Rings of Power, build your legend and ultimately confront the evil of Sauron in this story of Middle-earth. The release date was set to Sept. 30 2014.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
+                    </article>
+                    <button type="button" value="See more" role="button" style="margin-left: .5em; padding: .5em 0; width: 100px; text-transform: uppercase; background: #fff; color: #1E90FF; border: .1em solid; outline: 0; transition: color .25s;">See more</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section class="sec-games" style="background: #222; color: #fff;">
+            <div class="row" style="margin: auto; width: 100%; max-width: 960px; margin-bottom: 2em;">
+                <h1 style="text-align: center;">Top Games</h1>
+                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                    <a href="#" style="transition: color .25s; text-decoration: none;">
+                        <img src="http://fanboydestroy.files.wordpress.com/2014/05/metro_redux1.jpg" alt="Metro: Redux picture" style="width: 100%; height: 190px;">
+                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">Metro: Redux</h2>
+                    </a>
+                </div>
+                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                    <a href="#" style="transition: color .25s; text-decoration: none;">
+                        <img src="http://playstationenthusiast.com/wp-content/uploads/2014/08/The-Last-of-Us-Remastered-large.jpg" alt="The Last of Us Remastered picture" style="width: 100%; height: 190px;">
+                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">The Last of Us Remastered</h2>
+                    </a>
+                </div>
+                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                    <a href="#" style="transition: color .25s; text-decoration: none;">
+                        <img src="https://i.imgur.com/nsVNrcn.png" alt="The Evil Within picture" style="width: 100%; height: 190px;">
+                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">The Evil Within</h2>
+                    </a>
+                </div>
+                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                    <a href="#" style="transition: color .25s; text-decoration: none;">
+                        <img src="http://www.xboxcentrum.cz/obrazky/watchdogs.jpg" alt="Watch Dogs picture" style="width: 100%; height: 190px;">
+                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">Watch Dogs</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="background: #333; color: #fff; text-align: center; padding: 20px;">
+            <div class="footer-outer" style="padding: 1em 0; background: #1E90FF; color: #fff;">
+                <div class="row" style="margin: auto; width: 100%; max-width: 960px;">
+                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                        <h2>Navigation</h2>
+                        <ul class="footer-nav" style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Home</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Games</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Events</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">News</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                        <h2>Categories</h2>
+                        <ul class="footer-cat" style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Action</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Puzzle</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">RPG</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Simulation</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Sport</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Strategy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                        <h2>Latest Posts</h2>
+                        <ul class="footer-posts" style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Planetary Annihilation</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">NHL 15</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Wolfenstein: The New Order</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">The Swapper</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Destiny</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Middle-earth: Shadow of Mordor</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
+                        <h2>Platforms</h2>
+                        <ul class="footer-platforms" style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">PC</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">PS4</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">PS3</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Vita</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Xbox One</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Xbox 360</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Wii U</a></li>
+                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">3DS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: auto; width: 100%; max-width: 960px; padding: .5em;">
+                <span class="copy" style="font-size: .8em; font-style: italic;">Gamer &copy;, 2014 Privacy Policy</span>
+                <ul class="soc-media" style="float: right; list-style-type: none; margin: 0; padding: 0;">
+                    <li style="float: left; margin-right: .5em;"><a href="https://twitter.com/alexdevero" class="fa fa-twitter" target="_blank" style="display: block; font-size: 130%; color: #1E90FF; transition: color .25s; text-decoration: none;"></a></li>
+                    <li style="float: left; margin-right: .5em;"><a href="https://facebook.com/lex.devero" class="fa fa-facebook" target="_blank" style="display: block; font-size: 130%; color: #1E90FF; transition: color .25s; text-decoration: none;"></a></li>
+                    <li style="float: left; margin-right: .5em;"><a href="#nav" class="fa fa-chevron-up" style="display: block; font-size: 130%; color: #1E90FF; transition: color .25s; text-decoration: none;"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
