@@ -1,189 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="https://www.w3.org/1999/xhtml/">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intranet Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>News Aggregate Template</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: 100%;">
 
-    <div class="wrapper" style="height: 100%;">
-        <!-- Header -->
-        <header id="nav" role="banner" style="float: left; position: relative; width: 100%; background: #1E90FF; box-shadow: 0px 1px 3px #333; z-index: 1;">
-            <nav role="navigation" style="margin: auto; width: 100%; max-width: 960px;">
-                <i class="fa fa-gamepad" style="display: block; float: left; margin-left: .25em; font-size: 3em; color: #fff; cursor: pointer;"></i>
-                <input type="checkbox" id="nav-check" style="display: none;" />
-                <ul class="nav" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-end; list-style-type: none; margin: 0; padding: 0;">
-                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Home</a></li>
-                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Games</a></li>
-                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Events</a></li>
-                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">News</a></li>
-                    <li><a href="#" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;">Contacts</a></li>
-                    <li><a href="#" class="fa fa-search" style="text-align: center; color: #fff; display: block; padding: 1em .75em; text-decoration: none; transition: all .25s;"></a></li>
-                </ul>
-                <label class="fa fa-bars" for="nav-check" style="display: none; font-size: 2.5em; cursor: pointer;"></label>
-            </nav>
-        </header>
+<body id="page" style="position:relative; background:url('images/page_bg.png') 0 0 repeat; font-family:Arial, Helvetica, sans-serif; line-height:170%; color:#646464; font-size:12px;">
 
-        <!-- Intro Section -->
-        <section class="sec-intro" style="padding-top: 0;">
-            <div class="row" style="margin: auto; width: 100%; max-width: 960px;">
-                <img src="http://games.mxdwn.com/wp-content/uploads/2014/06/evil-within-4.jpg" alt="The Evil Within picture" style="float: left; width: 50%; height: 480px; vertical-align: top;">
-                <img src="http://data.techtimes.com/data/images/full/14561/batman-arkham-knight-gamescom-3-jpg.jpg" alt="Batman: Arkham Knigh picture" style="float: left; width: 50%; height: 480px; vertical-align: top;">
-            </div>
-            <div class="row" style="margin: auto; width: 100%; max-width: 960px;">
-                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
-                    <img src="http://www.dlcompare.com/img/call-of-duty-advanced-warfare-img-4.jpg" alt="Call of Duty: Advanced Warfare" style="width: 100%; height: 200px;">
-                </div>
-                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
-                    <img src="http://static1.gamespot.com/uploads/original/917/9176928/2556601-0980017126-diablo.jpeg" alt="Diablo 3: Reaper of Souls" style="width: 100%; height: 200px;">
-                </div>
-                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
-                    <img src="http://s3.goodfon.su/wallpaper/previews-middle/668024.jpg" alt="Metro: Last Light - Redux" style="width: 100%; height: 200px;">
-                </div>
-                <div class="col-4" style="margin-right: -3.5px; width: 25%; display: inline-block; vertical-align: top;">
-                    <img src="http://static.gamespot.com/uploads/original/1535/15354745/2420857-2571372632-Dark-.jpg" alt="Dark Souls 2" style="width: 100%; height: 200px;">
-                </div>
-            </div>
-        </section>
+<!-- page setup -->
+<div id="pagebg" style="background:url('images/bodytop_line.png') 0 0 repeat-x;">
 
-        <!-- Posts Section -->
-        <section class="sec-posts" style="margin-bottom: 1em;">
-            <div class="row" style="margin: auto; width: 100%; max-width: 960px; border-top: .1em dashed #aaa;">
-                <div class="col-2" style="display: inline-block; width: 49%; min-width: 300px; vertical-align: top;">
-                    <h2 style="padding: 0 .25em;">Latest Posts</h2>
-                    <article class="post" style="padding: 0 .5em;">
-                        <img src="https://s3.amazonaws.com/ksr/projects/270437/photo-main.jpg?1397791154" alt="Planetary Annihilation picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
-                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Planetary Annihilation</h1>
-                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">Colonize solar systems, annihilate homeworlds, and exterminate your foes in epic interplanetary battles with multiple players and thousands of units. Planetary Annihilation is a next-generation RTS that takes the genre to a planetary scale.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
-                    </article>
-                    <article class="post" style="padding: 0 .5em;">
-                        <img src="http://im.tiscali.cz/games/2013/09/25/321029-swapperpoutak-653x367.jpg" alt="The Swapper picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
-                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">The Swapper</h1>
-                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">The Swapper features a unique art style that uses real-world clay-models and found objects to create an explorable space station realised in unique detail; gameplay sees players swap between different bodies to achieve otherwise impossible tasks.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
-                    </article>
-                    <article class="post" style="padding: 0 .5em;">
-                        <img src="http://86bb71d19d3bcb79effc-d9e6924a0395cb1b5b9f03b7640d26eb.r91.cf1.rackcdn.com/wp-content/uploads/2014/05/wolfenstein-the-new-order-walkthrough.jpg" alt="Wolfenstein: The New Order picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
-                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Wolfenstein: The New Order</h1>
-                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">1946: Europe. World War II rages on across Europe. Where the Allies once pressed advantage, the Nazi forces have turned the tide in dramatic fashion behind the technologically advanced war machine of General Wilhelm Strasse, aka Deathshead.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
-                    </article>
-                    <button type="button" value="See more" role="button" style="margin-left: .5em; padding: .5em 0; width: 100px; text-transform: uppercase; background: #fff; color: #1E90FF; border: .1em solid; outline: 0; transition: color .25s;">See more</button>
-                </div>
-                <div class="col-2" style="display: inline-block; width: 49%; min-width: 300px; vertical-align: top;">
-                    <h2 style="padding: 0 .25em;">Popular Posts</h2>
-                    <article class="post" style="padding: 0 .5em;">
-                        <img src="http://nilsenreport.ca/wp-content/uploads/2014/08/NHL15.jpg" alt="NHL 15 picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
-                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">NHL 15</h1>
-                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">The Skill Stick purports to give more control to the player. Protect the puck, receive passes without breaking stride, and discover an arsenal of sweet new dekes, all with an intuitive right stick control scheme. The game features Doc Emrick and more.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
-                    </article>
-                    <article class="post" style="padding: 0 .5em;">
-                        <img src="http://static.trustedreviews.com/94/00002d149/a4fb/Destiny.jpg" alt="Destiny picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
-                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Destiny</h1>
-                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">In Destiny (from the creators of Halo) you are a Guardian of the last city on Earth. You are able to wield incredible power. Explore the ancient ruins of our solar system, from the vast dunes of Mars to the lush jungles of Venus. Defeat Earth’s enemies.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
-                    </article>
-                    <article class="post" style="padding: 0 .5em;">
-                        <img src="http://wac.450f.edgecastcdn.net/80450F/screencrush.com/files/2013/11/Middle-Earth-Shadow-of-Mordor-Warner-Bros-Interactive.jpg" alt="Middle-earth: Shadow of Mordor picture" style="float: left; margin-right: .5em; width: 40%; height: 143px;">
-                        <h1 style="display: inline; font-size: 100%; cursor: pointer; color: #1E90FF; transition: color .25s;">Middle-earth: Shadow of Mordor</h1>
-                        <p style="padding-right: .25em; font-size: 90%; text-align: justify;">Fight your way through Mordor and reveal the truth of the spirit that compels you, discover the origins of the Rings of Power, build your legend and ultimately confront the evil of Sauron in this story of Middle-earth. The release date was set to Sept. 30 2014.<span class="icons" style="float: right;"><i class="fa fa-comment" style="cursor: pointer; color: #1E90FF; transition: color .25s; margin-right: .5em;"></i><i class="fa fa-thumbs-o-up" style="cursor: pointer; color: #1E90FF; transition: color .25s;"></i></span></p>
-                    </article>
-                    <button type="button" value="See more" role="button" style="margin-left: .5em; padding: .5em 0; width: 100px; text-transform: uppercase; background: #fff; color: #1E90FF; border: .1em solid; outline: 0; transition: color .25s;">See more</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Games Section -->
-        <section class="sec-games" style="background: #222; color: #fff;">
-            <div class="row" style="margin: auto; width: 100%; max-width: 960px; margin-bottom: 2em;">
-                <h1 style="text-align: center;">Top Games</h1>
-                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                    <a href="#" style="transition: color .25s; text-decoration: none;">
-                        <img src="http://fanboydestroy.files.wordpress.com/2014/05/metro_redux1.jpg" alt="Metro: Redux picture" style="width: 100%; height: 190px;">
-                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">Metro: Redux</h2>
-                    </a>
-                </div>
-                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                    <a href="#" style="transition: color .25s; text-decoration: none;">
-                        <img src="http://playstationenthusiast.com/wp-content/uploads/2014/08/The-Last-of-Us-Remastered-large.jpg" alt="The Last of Us Remastered picture" style="width: 100%; height: 190px;">
-                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">The Last of Us Remastered</h2>
-                    </a>
-                </div>
-                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                    <a href="#" style="transition: color .25s; text-decoration: none;">
-                        <img src="https://i.imgur.com/nsVNrcn.png" alt="The Evil Within picture" style="width: 100%; height: 190px;">
-                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">The Evil Within</h2>
-                    </a>
-                </div>
-                <div class="col-4" style="padding: 0 .5em; display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                    <a href="#" style="transition: color .25s; text-decoration: none;">
-                        <img src="http://www.xboxcentrum.cz/obrazky/watchdogs.jpg" alt="Watch Dogs picture" style="width: 100%; height: 190px;">
-                        <h2 style="margin: .1em 0; font-size: 105%; text-align: center; color: #C1171C; transition: color .25s;">Watch Dogs</h2>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer style="background: #333; color: #fff; text-align: center; padding: 20px;">
-            <div class="footer-outer" style="padding: 1em 0; background: #1E90FF; color: #fff;">
-                <div class="row" style="margin: auto; width: 100%; max-width: 960px;">
-                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                        <h2>Navigation</h2>
-                        <ul class="footer-nav" style="list-style-type: none; margin: 0; padding: 0;">
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Home</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Games</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Events</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">News</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Contacts</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                        <h2>Categories</h2>
-                        <ul class="footer-cat" style="list-style-type: none; margin: 0; padding: 0;">
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Action</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Puzzle</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">RPG</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Simulation</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Sport</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Strategy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                        <h2>Latest Posts</h2>
-                        <ul class="footer-posts" style="list-style-type: none; margin: 0; padding: 0;">
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Planetary Annihilation</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">NHL 15</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Wolfenstein: The New Order</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">The Swapper</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Destiny</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Middle-earth: Shadow of Mordor</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-4" style="display: inline-block; width: 24.7%; min-width: 230px; vertical-align: top;">
-                        <h2>Platforms</h2>
-                        <ul class="footer-platforms" style="list-style-type: none; margin: 0; padding: 0;">
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">PC</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">PS4</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">PS3</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Vita</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Xbox One</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Xbox 360</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">Wii U</a></li>
-                            <li><a href="#" style="color: #fff; text-decoration: none; transition: color .25s;">3DS</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin: auto; width: 100%; max-width: 960px; padding: .5em;">
-                <span class="copy" style="font-size: .8em; font-style: italic;">Gamer &copy;, 2014 Privacy Policy</span>
-                <ul class="soc-media" style="float: right; list-style-type: none; margin: 0; padding: 0;">
-                    <li style="float: left; margin-right: .5em;"><a href="https://twitter.com/alexdevero" class="fa fa-twitter" target="_blank" style="display: block; font-size: 130%; color: #1E90FF; transition: color .25s; text-decoration: none;"></a></li>
-                    <li style="float: left; margin-right: .5em;"><a href="https://facebook.com/lex.devero" class="fa fa-facebook" target="_blank" style="display: block; font-size: 130%; color: #1E90FF; transition: color .25s; text-decoration: none;"></a></li>
-                    <li style="float: left; margin-right: .5em;"><a href="#nav" class="fa fa-chevron-up" style="display: block; font-size: 130%; color: #1E90FF; transition: color .25s; text-decoration: none;"></a></li>
-                </ul>
-            </div>
-        </footer>
+  <!-- wrapper -->
+  <div class="rapidxwpr floatholder" style="margin:auto; width:980px;">
+  
+    <!-- header -->
+    <div id="header" style="position:relative; height:160px; margin:0px 0px 0px 0px;">
+    
+      <!-- logo -->
+      <a href="index.html"><img id="logo" src="images/logo.png" alt="Home" title="Home" style="position:absolute; top:53px; left:0; width:327px; height:54px; border:0;" /></a>
+      <!-- / logo -->
+      
+      <!-- rss -->
+      <a href="index.html"><img id="rss" class="correct-png" src="images/rss_img.png" alt="rss" title="rss" style="border:0; float:right; margin:0 10px 0 0;" /></a>
+      <!-- / rss -->
+      
+      <!-- tagline -->
+      <div id="tagline" style="float:right; margin:60px 35px 0 0; background:url('images/tagleft_bg.png') 0 0 no-repeat; padding:5px 30px 9px 30px;">
+        <span style="font-size:13px; font-weight:bold; color:#000;">The best of the best in design from around the world</span>
+      </div>
+      <!-- / tagline -->
+    
     </div>
+    <!-- / header -->
+    
+    <!-- main body -->
+    <div id="middle" style="width:auto; margin:0px 0px 0px 0px; clear:both;">
+    
+      <!-- today news -->
+      <div id="today_news" class="clearingfix" style="display:block;">
+        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">The most popular news today</h2>
+        <ul style="list-style:none; margin:14px 0 0 0; float:left;">
+          <li style="margin:0 10px 5px 0; font-family:'Lucida Grande'; font-size:13px; width:315px; height:22px; float:left;"><a href="" style="background:url('images/li_bg.png') 100% 0 no-repeat; display:block; color:#0bcbf6; text-decoration:none; padding:0 0 0 10px; height:22px;">Best of 2008: Most popular free downloads</a></li>
+          <!-- Repeat the above <li> block for each news item -->
+        </ul>
+      </div>
+      <!-- / today news -->
+      
+      <!-- websites -->
+      <div id="website" class="clearingfix" style="display:block; margin:35px 0;">
+      
+        <div class="website-col" style="width:315px; float:left; margin:0 10px 0 0;">
+          <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">website.com</h2>
+          <ul style="list-style:none; margin:14px 0 0 0; float:left;">
+            <li style="margin:0 10px 5px 0; font-family:'Lucida Grande'; font-size:13px; width:315px; height:22px; float:left;"><a href="" style="background:url('images/li_bg.png') 100% 0 no-repeat; display:block; color:#0bcbf6; text-decoration:none; padding:0 0 0 10px; height:22px;">Best of 2008: Most popular free downloads</a></li>
+            <!-- Repeat the above <li> block for each news item -->
+          </ul>
+        </div>
+        
+        <!-- Repeat the above <div class="website-col"> block for each website column -->
+      
+      </div>
+      <!-- / websites -->
+      
+      <!-- latest news -->
+      <div id="latest" style="margin:0 0 10px 0;">
+        <h2 style="margin:0 0 10px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">Latest News</h2>
+        <div class="news-bg clearingfix" style="background:url('images/fliker_bg.png') 0 0 repeat-x; padding:0; display:block;">
+          <ul style="list-style:none;">
+            <li style="text-decoration:none; float:left;"><a href="" style="text-decoration:none;"><img src="images/latest_img1.jpg" alt="" style="float:left; border:solid 1px #FFF; margin:20px 0 20px 18px;" /></a></li>
+            <!-- Repeat the above <li> block for each latest news item -->
+          </ul>
+        </div>
+      </div>
+      <!-- / latest news -->
+      
+      <!-- favorites -->
+      <div id="favorites" class="clearingfix" style="display:block; margin:40px 0 0 0;">
+      
+        <div class="favorites-col" style="float:left; margin:0 15px 0 0;">
+          <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">favorite online magazines</h2>
+          <ul style="list-style:none; margin:10px 0 0 0;">
+            <li style="background:url('images/twocol_bg.png') 0 0 repeat-x; width:460px; margin:0 0 5px 0; font-family:'Lucida Grande'; font-size:12px; color:#FFF; font-weight:bold; padding:5px 0 5px 15px;">Online Magazine<br /><a href="" style="display:block; font-weight:normal; font-size:13px;">This is where the post title would be and be able to expand to multiple</a></li>
+            <!-- Repeat the above <li> block for each favorite item -->
+          </ul>
+        </div>
+        
+        <!-- Repeat the above <div class="favorites-col"> block for each favorites column -->
+      
+      </div>
+      <!-- / favorites -->
+      
+      <!-- flickr -->
+      <div id="flickr" style="margin:30px 0 0 0;">
+        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">flickr popular images</h2>
+        <div class="flickr_img" style="background:url('images/fliker_bg.png') 0 0 repeat-x; padding:14px 0 40px 8px; margin:15px 0 0 0;">
+          <ul class="clearingfix" style="list-style:none; display:block;">
+            <li style="float:left; margin:5px 9px;"><a href=""><img src="images/flickr_img1.jpg" alt="" style="border:solid 1px #FFF;" /></a></li>
+            <!-- Repeat the above <li> block for each flickr image -->
+          </ul>
+          <a href="" class="brought_by" style="float:right; text-align:right; padding:0 70px 0 0px; font-size:12px; color:#b2b2b2; margin:5px 20px 0 0;">Photos brought to you by</a>
+        </div>
+      </div>
+      <!-- / flickr -->
+      
+      <!-- galleries -->
+      <div id="galleries" style="margin:30px 0 0 0;">
+        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">css galleries</h2>
+        <div class="galleries_img clearingfix" style="background:url('images/fliker_bg.png') 0 0 repeat-x; padding:17px 0 8px 8px; margin:15px 0 0 0; display:block;">
+        
+          <ul class="gallery" style="list-style:none; width:710px; float:left; margin:10px 0 0 0;">
+            <li style="float:left; margin:0 0 5px 13px;"><a href=""><img src="images/cssgallerais_img.jpg" alt="" /></a></li>
+            <!-- Repeat the above <li> block for each gallery image -->
+          </ul>
+          
+          <ul class="advert" style="list-style:none; width:250px; margin:0 10px 0 0; float:right;">
+            <li style="float:left; margin:0 0 5px 10px;"><a href=""><img src="images/advert_space.jpg" alt="" style="border:solid 2px #000;" /></a></li>
+            <!-- Repeat the above <li> block for each advert image -->
+          </ul>
+        
+        </div>
+      </div>
+      <!-- / galleries -->
+      
+      <!-- sponsors -->
+      <div id="site_sponsors" class="clearingfix" style="display:block; margin:35px 0 0 0;">
+        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">site sponsors</h2>
+        <ul style="list-style:none; margin:14px 0 0 0; float:left;">
+          <li style="margin:0 10px 5px 0; font-family:'Lucida Grande'; font-size:13px; height:22px; float:left; width:315px;"><a href="" style="background:url('images/li_bg.png') 100% 0 no-repeat; display:block; color:#0bcbf6; text-decoration:none; padding:0 0 0 10px; height:22px;">Best of 2008: Most popular free downloads</a></li>
+          <!-- Repeat the above <li> block for each sponsor item -->
+        </ul>
+      </div>
+      <!-- / sponsors -->
+    
+    </div>
+    <!-- / main body -->
+  
+  </div>
+  <!-- / wrapper -->
+
+</div>
+<!-- / page setup -->
+
+<!-- footer -->
+<div id="footer" style="width:auto; padding:70px 0px 20px 0px; clear:both; color:#fff; background:url('images/footer_bg.png') 0 0 repeat-x; overflow:hidden;">
+  <div class="rapidxwpr floatholder" style="margin:auto; width:980px;">
+  
+    <!-- copyright -->
+    <div class="copyright" style="width:490px; float:left;">
+      <p style="color:white;">&#169; Copyright. <script type="text/javascript">document.write(new Date().getFullYear());</script>. <a href="https://www.opensourcetemplates.org/index.html" style="color:#0bcbf6; text-decoration:none;">Open Source Website Templates</a>. All Rights Reserved. <a href="https://www.opensourcetemplates.org/terms.html" style="color:#0bcbf6; text-decoration:none;">Terms</a> | <a href="https://www.opensourcetemplates.org/sitemap.html" style="color:#0bcbf6; text-decoration:none;">Site Map</a> | <a href="https://themeruler.com/" style="color:#0bcbf6; text-decoration:none;">More Themes</a></p>
+    </div>
+    <!-- / copyright -->
+    
+    <!-- contact form -->
+    <div class="footer-contact" style="padding:23px 0 0 0; float:right; width:460px;">
+      <h3 style="color:#5496b4; font-size:16px; margin:0 0 0 10px; font-style:italic; font-weight:normal; background:url('images/footer-contact.png') 0 0 repeat-x; padding:2px 10px 3px 10px; float:left;">Drop us a line</h3>
+      <form action="" method="get" style="clear:both; padding:10px 0 0 0;">
+        <div style="width:200px; float:left; padding:0 15px;">
+          <label for="name" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Name:</label><input type="text" name="name" class="contact-field" value="" tabindex="1" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+          <label for="email" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">E-mail:</label><input type="text" name="email" class="contact-field" value="Example Text" tabindex="2" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+          <label for="subject" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Regarding:</label><input type="text" name="subject" class="contact-field" value="" tabindex="3" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
+        </div>
+        <div style="width:200px; float:left; padding:0 15px;">
+          <label for="message" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Message:</label><textarea name="message" class="contact-message" tabindex="4" rows="10" cols="10" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b; height:77px;">Example Text</textarea>
+          <input type="submit" name="submit" class="contact-submit" value="" tabindex="5" style="border:0; padding:0; width:98px; height:40px; text-indent:-9999px; cursor:pointer; background:url('images/contact-submit.png') 0 0 no-repeat; margin:10px -10px 0 0; float:right;" />
+        </div>
+      </form>
+    </div>
+    <!-- / contact form -->
+  
+  </div>
+</div>
+<!-- / footer -->
 
 </body>
 </html>
