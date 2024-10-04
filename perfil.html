@@ -25,12 +25,40 @@
       }
     }
   </script>
+  <style>
+    .usp-icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .testimonial-img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+    }
+    .footer-column {
+      flex: 1;
+      padding: 20px;
+    }
+    .footer-column form input, .footer-column form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .footer-column form button {
+      padding: 10px 20px;
+      background: #1E90FF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
 
   <!-- Header -->
   <header style="background: #333; color: #fff; padding: 20px; text-align: center;">
-    <h1>Team RPM</h1>
+    <h1>Gran Turismo Portugal</h1>
     <nav>
       <a href="index.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Home</a>
       <a href="about.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Sobre</a>
@@ -40,8 +68,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section style="background: linear-gradient(to right, #1E90FF, #00BFFF); color: #fff; text-align: center; padding: 100px 20px;">
-    <h2>Escreve o teu PSN ID</h2>
+  <section style="background: linear-gradient(to right, #063ecc, #8f0618); color: #fff; text-align: center; padding: 100px 20px;">
+    <h2 style="font-size: 2.5em;">Escreve o teu PSN ID</h2>
     <p>Confere as tuas estatísticas personalizadas após inseries os teu PSN ID de 2 websites.</p>
   </section>
 
@@ -73,14 +101,17 @@
       <h2 style="text-align: center;">3 Motivos para usares</h2>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
         <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
+          <div class="usp-icon">📊</div>
           <h3>Estatisticas Detalhadas</h3>
           <p>Tem acesso a info previligiada com estatísticas detalhadas da tua performance no Gran Turismo 7</p>
         </div>
         <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
+          <div class="usp-icon">👌</div>
           <h3>Facil de Usar</h3>
           <p>Esta ferramenta tem como objectivo simplificar o processo de acesso a info.</p>
         </div>
         <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
+          <div class="usp-icon">💸</div>
           <h3>Grátis</h3>
           <p>Todas as ferramentas que produzimos sao de acesso gratuito</p>
         </div>
@@ -89,12 +120,14 @@
 
     <!-- Testimonials -->
     <section style="margin-bottom: 40px;">
-      <h2 style="text-align: center;">What Our Users Say</h2>
+      <h2 style="text-align: center;">Tertemunhos</h2>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px;">
+        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px; display: flex; align-items: center;">
+          <img src="path/to/jose_silva.jpg" alt="José Silva" class="testimonial-img">
           <p>"Esta ferramenta ajudou-me a melhorar imenso as minhas habilidades de jogo. As estatísticas são precisas e fáceis de entender." - <strong>José Silva</strong></p>
         </div>
-        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px;">
+        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px; display: flex; align-items: center;">
+          <img src="path/to/igor_fraga.jpg" alt="Igor Fraga" class="testimonial-img">
           <p>"Adoro como a interface é fácil de usar. Consigo acompanhar facilmente o meu progresso e ver onde preciso de melhorar." - <strong>Igor Fraga</strong></p>
         </div>
       </div>
@@ -109,8 +142,37 @@
   </main>
 
   <!-- Footer -->
-  <footer style="background: #333; color: #fff; text-align: center; padding: 20px;">
-    <p>&copy; 2024 Gran Turismo Portugal. All rights reserved.</p>
+  <footer style="background: #333; color: #fff; text-align: center; padding: 20px; display: flex; flex-wrap: wrap;">
+    <div class="footer-column">
+      <h3>Sobre o Projeto</h3>
+      <p>Gran Turismo Portugal é um projeto dedicado a fornecer estatísticas detalhadas e insights sobre a performance dos jogadores no Gran Turismo 7.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+        <li><a href="about.html" style="color: #fff; text-decoration: none;">Sobre</a></li>
+        <li><a href="services.html" style="color: #fff; text-decoration: none;">Ferramentas</a></li>
+        <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contactos</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Redes Sociais</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#" style="color: #fff; text-decoration: none;">Facebook</a></li>
+        <li><a href="#" style="color: #fff; text-decoration: none;">Twitter</a></li>
+        <li><a href="#" style="color: #fff; text-decoration: none;">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contacto</h3>
+      <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   </footer>
 
 </body>
