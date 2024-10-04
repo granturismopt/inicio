@@ -5,26 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gran Turismo 7 - Estatisticas do Perfil</title>
   <script type="text/javascript">
-    async function fetchPsnData(psnId) {
-      try {
-        const response = await fetch(`http://gtgopher.ddns.net/current?psn=${psnId}`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        console.log(data);
-        // Process and display the data as needed
-        document.getElementById('psnData').innerText = JSON.stringify(data, null, 2);
-      } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
-        document.getElementById('psnData').innerText = 'Error fetching data. Please try again later.';
+    function openGtgopher() {
+      var psnId = document.getElementById('psnId').value;
+      if (psnId) {
+        var url1 = 'http://gtgopher.ddns.net/current?psn=' + psnId;
+        window.open(url1, '_blank');
+      } else {
+        alert('Please enter your PSN ID.');
       }
     }
 
-    function handleSubmit() {
-      const psnId = document.getElementById('psnId').value;
+    function openDgEdge() {
+      var psnId = document.getElementById('psnId').value;
       if (psnId) {
-        fetchPsnData(psnId);
+        var url2 = 'https://dg-edge.com/players/' + psnId;
+        window.open(url2, '_blank');
       } else {
         alert('Please enter your PSN ID.');
       }
@@ -61,7 +56,7 @@
     <!-- PSN ID Form -->
     <section style="margin-bottom: 40px;">
       <h2 style="text-align: center;">Escreve o teu PSN ID</h2>
-      <form onsubmit="handleSubmit(); return false;" style="text-align: center;">
+      <form style="text-align: center;">
         <label for="psnId" style="display: block; margin-bottom: 10px;">PSN ID:</label>
         <input type="text" id="psnId" name="psnId" style="padding: 10px; width: 100%; max-width: 300px; margin-bottom: 10px;" />
         <div>
@@ -69,12 +64,6 @@
           <button type="button" onclick="openDgEdge()" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer;">DG-EDGE</button>
         </div>
       </form>
-    </section>
-
-    <!-- Display PSN Data -->
-    <section style="margin-bottom: 40px;">
-      <h2>PSN Data</h2>
-      <pre id="psnData" style="background: #f4f4f4; padding: 20px; border: 1px solid #ddd;"></pre>
     </section>
 
     <!-- Unique Selling Propositions (USPs) -->
