@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gran Turismo 7 - Estatisticas do Perfil</title>
+  <title>Gran Turismo 7 - Pilotos</title>
   <script type="text/javascript">
     async function fetchCsvData() {
       try {
@@ -33,7 +33,7 @@
 
       const thead = document.createElement('thead');
       const headerRow = document.createElement('tr');
-      data.headers.slice(0, -3).forEach(header => {
+      data.headers.slice(0, 12).forEach(header => {
         const th = document.createElement('th');
         th.textContent = header;
         th.style.border = '1px solid #ddd';
@@ -47,7 +47,7 @@
       const tbody = document.createElement('tbody');
       data.rows.forEach(row => {
         const tr = document.createElement('tr');
-        row.slice(0, -3).forEach(cell => {
+        row.slice(0, 12).forEach(cell => {
           const td = document.createElement('td');
           td.textContent = cell;
           td.style.border = '1px solid #ddd';
@@ -62,18 +62,18 @@
     }
 
     function filterTable() {
-      const teamName = document.getElementById('teamName').value.toLowerCase();
+      const sigla = document.getElementById('sigla').value.toLowerCase();
       const status = document.getElementById('status').value.toLowerCase();
-      const drSr = document.getElementById('drSr').value.toLowerCase();
+      const dr = document.getElementById('dr').value.toLowerCase();
 
       const rows = document.querySelectorAll('#csvData table tbody tr');
       rows.forEach(row => {
         const cells = row.querySelectorAll('td');
-        const teamNameMatch = cells[1].textContent.toLowerCase().includes(teamName);
-        const statusMatch = cells[2].textContent.toLowerCase().includes(status);
-        const drSrMatch = cells[3].textContent.toLowerCase().includes(drSr);
+        const siglaMatch = cells[3].textContent.toLowerCase().includes(sigla); // Assuming "Sigla" is the 4th column
+        const statusMatch = cells[4].textContent.toLowerCase().includes(status); // Assuming "Estado" is the 5th column
+        const drMatch = cells[5].textContent.toLowerCase().includes(dr); // Assuming "DR" is the 6th column
 
-        if (teamNameMatch && statusMatch && drSrMatch) {
+        if (siglaMatch && statusMatch && drMatch) {
           row.style.display = '';
         } else {
           row.style.display = 'none';
@@ -84,13 +84,16 @@
     document.addEventListener('DOMContentLoaded', fetchCsvData);
   </script>
   <style>
-    .usp-icon {
-      font-size: 2em;
-      margin-bottom: 10px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
-    .testimonial-img {
-      font-size: 4em;
-      margin-right: 20px;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
     }
     .footer-column {
       flex: 1;
@@ -125,8 +128,8 @@
 
   <!-- Hero Section -->
   <section style="background: linear-gradient(to right, #063ecc, #8f0618); color: #fff; text-align: center; padding: 100px 20px;">
-    <h2 style="font-size: 2.5em;">Escreve o teu PSN ID</h2>
-    <p>Confere as tuas estatísticas personalizadas após inseries os teu PSN ID de 2 websites.</p>
+    <h2 style="font-size: 2.5em;">Pilotos</h2>
+    <p>Consulta a list de mais de 1.000 pilotos portugueses de Gran Turismo 7</p>
   </section>
 
   <!-- Main Content -->
@@ -135,16 +138,15 @@
     <section style="margin-bottom: 40px;">
       <h2 style="text-align: center;">Filtrar Pilotos</h2>
       <div style="text-align: center; margin-bottom: 20px;">
-        <input type="text" id="teamName" placeholder="Nome da Equipa" oninput="filterTable()" style="padding: 10px; margin-right: 10px;">
+        <input type="text" id="sigla" placeholder="Sigla" oninput="filterTable()" style="padding: 10px; margin-right: 10px;">
         <input type="text" id="status" placeholder="Estado" oninput="filterTable()" style="padding: 10px; margin-right: 10px;">
-        <input type="text" id="drSr" placeholder="DR e SR" oninput="filterTable()" style="padding: 10px;">
+        <input type="text" id="dr" placeholder="DR" oninput="filterTable()" style="padding: 10px;">
       </div>
     </section>
 
     <!-- CSV Data Display -->
     <section style="margin-bottom: 40px;">
-      <h2 style="text-align: center;">Pilotos</h2>
-      <div id="csvData" style="overflow-x: auto;"></div>
+      <div id="csvData" style="overflow-x: auto;" align="center"></div>
     </section>
 
     <!-- PSN ID Form -->
