@@ -1,176 +1,56 @@
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml/">
+<html lang="en">
 <head>
-  <title>News Aggregate Template</title>
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - My Website</title>
+  <script type="text/javascript">
+    function openTabs() {
+      var psnId = document.getElementById('psnId').value;
+      if (psnId) {
+        var url1 = 'http://gtgopher.ddns.net/current?psn=' + psnId;
+        var url2 = 'https://dg-edge.com/players/' + psnId;
+        window.open(url1, '_blank');
+        window.open(url2, '_blank');
+      } else {
+        alert('Please enter your PSN ID.');
+      }
+    }
+  </script>
 </head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
 
-<body id="page" style="position:relative; background:url('images/page_bg.png') 0 0 repeat; font-family:Arial, Helvetica, sans-serif; line-height:170%; color:#646464; font-size:12px;">
+  <!-- Header -->
+  <header style="background: #333; color: #fff; padding: 20px; text-align: center;">
+    <h1>My Website</h1>
+    <nav>
+      <a href="index.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Home</a>
+      <a href="about.html" style="color: #fff; margin: 0 15px; text-decoration: none;">About</a>
+      <a href="services.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Services</a>
+      <a href="contact.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Contact</a>
+    </nav>
+  </header>
 
-<!-- page setup -->
-<div id="pagebg" style="background:url('images/bodytop_line.png') 0 0 repeat-x;">
+  <!-- Main Content -->
+  <main style="padding: 20px;">
+    <h2>Welcome to My Website</h2>
+    <p>This is the homepage of my website. Here you can find various information about our services and team.</p>
 
-  <!-- wrapper -->
-  <div class="rapidxwpr floatholder" style="margin:auto; width:980px;">
-  
-    <!-- header -->
-    <div id="header" style="position:relative; height:160px; margin:0px 0px 0px 0px;">
-    
-      <!-- logo -->
-      <a href="index.html"><img id="logo" src="images/logo.png" alt="Home" title="Home" style="position:absolute; top:53px; left:0; width:327px; height:54px; border:0;" /></a>
-      <!-- / logo -->
-      
-      <!-- rss -->
-      <a href="index.html"><img id="rss" class="correct-png" src="images/rss_img.png" alt="rss" title="rss" style="border:0; float:right; margin:0 10px 0 0;" /></a>
-      <!-- / rss -->
-      
-      <!-- tagline -->
-      <div id="tagline" style="float:right; margin:60px 35px 0 0; background:url('images/tagleft_bg.png') 0 0 no-repeat; padding:5px 30px 9px 30px;">
-        <span style="font-size:13px; font-weight:bold; color:#000;">The best of the best in design from around the world</span>
-      </div>
-      <!-- / tagline -->
-    
-    </div>
-    <!-- / header -->
-    
-    <!-- main body -->
-    <div id="middle" style="width:auto; margin:0px 0px 0px 0px; clear:both;">
-    
-      <!-- today news -->
-      <div id="today_news" class="clearingfix" style="display:block;">
-        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">The most popular news today</h2>
-        <ul style="list-style:none; margin:14px 0 0 0; float:left;">
-          <li style="margin:0 10px 5px 0; font-family:'Lucida Grande'; font-size:13px; width:315px; height:22px; float:left;"><a href="" style="background:url('images/li_bg.png') 100% 0 no-repeat; display:block; color:#0bcbf6; text-decoration:none; padding:0 0 0 10px; height:22px;">Best of 2008: Most popular free downloads</a></li>
-          <!-- Repeat the above <li> block for each news item -->
-        </ul>
-      </div>
-      <!-- / today news -->
-      
-      <!-- websites -->
-      <div id="website" class="clearingfix" style="display:block; margin:35px 0;">
-      
-        <div class="website-col" style="width:315px; float:left; margin:0 10px 0 0;">
-          <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">website.com</h2>
-          <ul style="list-style:none; margin:14px 0 0 0; float:left;">
-            <li style="margin:0 10px 5px 0; font-family:'Lucida Grande'; font-size:13px; width:315px; height:22px; float:left;"><a href="" style="background:url('images/li_bg.png') 100% 0 no-repeat; display:block; color:#0bcbf6; text-decoration:none; padding:0 0 0 10px; height:22px;">Best of 2008: Most popular free downloads</a></li>
-            <!-- Repeat the above <li> block for each news item -->
-          </ul>
-        </div>
-        
-        <!-- Repeat the above <div class="website-col"> block for each website column -->
-      
-      </div>
-      <!-- / websites -->
-      
-      <!-- latest news -->
-      <div id="latest" style="margin:0 0 10px 0;">
-        <h2 style="margin:0 0 10px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">Latest News</h2>
-        <div class="news-bg clearingfix" style="background:url('images/fliker_bg.png') 0 0 repeat-x; padding:0; display:block;">
-          <ul style="list-style:none;">
-            <li style="text-decoration:none; float:left;"><a href="" style="text-decoration:none;"><img src="images/latest_img1.jpg" alt="" style="float:left; border:solid 1px #FFF; margin:20px 0 20px 18px;" /></a></li>
-            <!-- Repeat the above <li> block for each latest news item -->
-          </ul>
-        </div>
-      </div>
-      <!-- / latest news -->
-      
-      <!-- favorites -->
-      <div id="favorites" class="clearingfix" style="display:block; margin:40px 0 0 0;">
-      
-        <div class="favorites-col" style="float:left; margin:0 15px 0 0;">
-          <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">favorite online magazines</h2>
-          <ul style="list-style:none; margin:10px 0 0 0;">
-            <li style="background:url('images/twocol_bg.png') 0 0 repeat-x; width:460px; margin:0 0 5px 0; font-family:'Lucida Grande'; font-size:12px; color:#FFF; font-weight:bold; padding:5px 0 5px 15px;">Online Magazine<br /><a href="" style="display:block; font-weight:normal; font-size:13px;">This is where the post title would be and be able to expand to multiple</a></li>
-            <!-- Repeat the above <li> block for each favorite item -->
-          </ul>
-        </div>
-        
-        <!-- Repeat the above <div class="favorites-col"> block for each favorites column -->
-      
-      </div>
-      <!-- / favorites -->
-      
-      <!-- flickr -->
-      <div id="flickr" style="margin:30px 0 0 0;">
-        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">flickr popular images</h2>
-        <div class="flickr_img" style="background:url('images/fliker_bg.png') 0 0 repeat-x; padding:14px 0 40px 8px; margin:15px 0 0 0;">
-          <ul class="clearingfix" style="list-style:none; display:block;">
-            <li style="float:left; margin:5px 9px;"><a href=""><img src="images/flickr_img1.jpg" alt="" style="border:solid 1px #FFF;" /></a></li>
-            <!-- Repeat the above <li> block for each flickr image -->
-          </ul>
-          <a href="" class="brought_by" style="float:right; text-align:right; padding:0 70px 0 0px; font-size:12px; color:#b2b2b2; margin:5px 20px 0 0;">Photos brought to you by</a>
-        </div>
-      </div>
-      <!-- / flickr -->
-      
-      <!-- galleries -->
-      <div id="galleries" style="margin:30px 0 0 0;">
-        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">css galleries</h2>
-        <div class="galleries_img clearingfix" style="background:url('images/fliker_bg.png') 0 0 repeat-x; padding:17px 0 8px 8px; margin:15px 0 0 0; display:block;">
-        
-          <ul class="gallery" style="list-style:none; width:710px; float:left; margin:10px 0 0 0;">
-            <li style="float:left; margin:0 0 5px 13px;"><a href=""><img src="images/cssgallerais_img.jpg" alt="" /></a></li>
-            <!-- Repeat the above <li> block for each gallery image -->
-          </ul>
-          
-          <ul class="advert" style="list-style:none; width:250px; margin:0 10px 0 0; float:right;">
-            <li style="float:left; margin:0 0 5px 10px;"><a href=""><img src="images/advert_space.jpg" alt="" style="border:solid 2px #000;" /></a></li>
-            <!-- Repeat the above <li> block for each advert image -->
-          </ul>
-        
-        </div>
-      </div>
-      <!-- / galleries -->
-      
-      <!-- sponsors -->
-      <div id="site_sponsors" class="clearingfix" style="display:block; margin:35px 0 0 0;">
-        <h2 style="margin:0 0 5px 0; color:#e7edf0; font-size:22px; font-style:italic; font-weight:normal;">site sponsors</h2>
-        <ul style="list-style:none; margin:14px 0 0 0; float:left;">
-          <li style="margin:0 10px 5px 0; font-family:'Lucida Grande'; font-size:13px; height:22px; float:left; width:315px;"><a href="" style="background:url('images/li_bg.png') 100% 0 no-repeat; display:block; color:#0bcbf6; text-decoration:none; padding:0 0 0 10px; height:22px;">Best of 2008: Most popular free downloads</a></li>
-          <!-- Repeat the above <li> block for each sponsor item -->
-        </ul>
-      </div>
-      <!-- / sponsors -->
-    
-    </div>
-    <!-- / main body -->
-  
-  </div>
-  <!-- / wrapper -->
-
-</div>
-<!-- / page setup -->
-
-<!-- footer -->
-<div id="footer" style="width:auto; padding:70px 0px 20px 0px; clear:both; color:#fff; background:url('images/footer_bg.png') 0 0 repeat-x; overflow:hidden;">
-  <div class="rapidxwpr floatholder" style="margin:auto; width:980px;">
-  
-    <!-- copyright -->
-    <div class="copyright" style="width:490px; float:left;">
-      <p style="color:white;">&#169; Copyright. <script type="text/javascript">document.write(new Date().getFullYear());</script>. <a href="https://www.opensourcetemplates.org/index.html" style="color:#0bcbf6; text-decoration:none;">Open Source Website Templates</a>. All Rights Reserved. <a href="https://www.opensourcetemplates.org/terms.html" style="color:#0bcbf6; text-decoration:none;">Terms</a> | <a href="https://www.opensourcetemplates.org/sitemap.html" style="color:#0bcbf6; text-decoration:none;">Site Map</a> | <a href="https://themeruler.com/" style="color:#0bcbf6; text-decoration:none;">More Themes</a></p>
-    </div>
-    <!-- / copyright -->
-    
-    <!-- contact form -->
-    <div class="footer-contact" style="padding:23px 0 0 0; float:right; width:460px;">
-      <h3 style="color:#5496b4; font-size:16px; margin:0 0 0 10px; font-style:italic; font-weight:normal; background:url('images/footer-contact.png') 0 0 repeat-x; padding:2px 10px 3px 10px; float:left;">Drop us a line</h3>
-      <form action="" method="get" style="clear:both; padding:10px 0 0 0;">
-        <div style="width:200px; float:left; padding:0 15px;">
-          <label for="name" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Name:</label><input type="text" name="name" class="contact-field" value="" tabindex="1" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
-          <label for="email" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">E-mail:</label><input type="text" name="email" class="contact-field" value="Example Text" tabindex="2" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
-          <label for="subject" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Regarding:</label><input type="text" name="subject" class="contact-field" value="" tabindex="3" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b;" />
-        </div>
-        <div style="width:200px; float:left; padding:0 15px;">
-          <label for="message" style="display:block; color:#000; font-size:12px; font-weight:bold; margin:6px 0 0 0;">Message:</label><textarea name="message" class="contact-message" tabindex="4" rows="10" cols="10" style="border:#e9e3ce 2px solid; padding:4px 2px; width:100%; font-size:12px; font-weight:bold; color:#5b5b5b; height:77px;">Example Text</textarea>
-          <input type="submit" name="submit" class="contact-submit" value="" tabindex="5" style="border:0; padding:0; width:98px; height:40px; text-indent:-9999px; cursor:pointer; background:url('images/contact-submit.png') 0 0 no-repeat; margin:10px -10px 0 0; float:right;" />
-        </div>
+    <!-- PSN ID Form -->
+    <div style="margin-top: 20px;">
+      <h3>Enter Your PSN ID</h3>
+      <form onsubmit="openTabs(); return false;">
+        <label for="psnId" style="display: block; margin-bottom: 10px;">PSN ID:</label>
+        <input type="text" id="psnId" name="psnId" style="padding: 10px; width: 100%; max-width: 300px; margin-bottom: 10px;" />
+        <input type="submit" value="Submit" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer;" />
       </form>
     </div>
-    <!-- / contact form -->
-  
-  </div>
-</div>
-<!-- / footer -->
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: #333; color: #fff; text-align: center; padding: 20px;">
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
