@@ -33,7 +33,7 @@
 
       const thead = document.createElement('thead');
       const headerRow = document.createElement('tr');
-      data.headers.forEach(header => {
+      data.headers.slice(0, -3).forEach(header => {
         const th = document.createElement('th');
         th.textContent = header;
         th.style.border = '1px solid #ddd';
@@ -47,7 +47,7 @@
       const tbody = document.createElement('tbody');
       data.rows.forEach(row => {
         const tr = document.createElement('tr');
-        row.forEach(cell => {
+        row.slice(0, -3).forEach(cell => {
           const td = document.createElement('td');
           td.textContent = cell;
           td.style.border = '1px solid #ddd';
@@ -59,6 +59,26 @@
       table.appendChild(tbody);
 
       document.getElementById('csvData').appendChild(table);
+    }
+
+    function filterTable() {
+      const teamName = document.getElementById('teamName').value.toLowerCase();
+      const status = document.getElementById('status').value.toLowerCase();
+      const drSr = document.getElementById('drSr').value.toLowerCase();
+
+      const rows = document.querySelectorAll('#csvData table tbody tr');
+      rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        const teamNameMatch = cells[1].textContent.toLowerCase().includes(teamName);
+        const statusMatch = cells[2].textContent.toLowerCase().includes(status);
+        const drSrMatch = cells[3].textContent.toLowerCase().includes(drSr);
+
+        if (teamNameMatch && statusMatch && drSrMatch) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
     }
 
     document.addEventListener('DOMContentLoaded', fetchCsvData);
@@ -111,12 +131,20 @@
 
   <!-- Main Content -->
   <main style="padding: 20px;">
-    <!-- Explanation Block -->
+    <!-- Filters -->
     <section style="margin-bottom: 40px;">
-      <h2 style="text-align: center;">Primeiro Passo: Escrever o PSN ID</h2>
-      <p style="text-align: center; max-width: 800px; margin: auto;">
-        Ao escreveres o teu PSN ID, irás ter acesso a info previligiada com estatísticas detalhadas da tua performance no Gran Turismo 7. Independentemente see estiveres a tentar melhorar as tuas skills ou apenas curioso com o rankins este formulário mostra-te tudo aquilo que precisas de saber.
-      </p>
+      <h2 style="text-align: center;">Filtrar Pilotos</h2>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <input type="text" id="teamName" placeholder="Nome da Equipa" oninput="filterTable()" style="padding: 10px; margin-right: 10px;">
+        <input type="text" id="status" placeholder="Estado" oninput="filterTable()" style="padding: 10px; margin-right: 10px;">
+        <input type="text" id="drSr" placeholder="DR e SR" oninput="filterTable()" style="padding: 10px;">
+      </div>
+    </section>
+
+    <!-- CSV Data Display -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="text-align: center;">Pilotos</h2>
+      <div id="csvData" style="overflow-x: auto;"></div>
     </section>
 
     <!-- PSN ID Form -->
@@ -130,56 +158,6 @@
           <button type="button" onclick="openDgEdge()" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer;">DG-EDGE</button>
         </div>
       </form>
-    </section>
-
-    <!-- CSV Data Display -->
-    <section style="margin-bottom: 40px;">
-      <h2 style="text-align: center;">Pilotos</h2>
-      <div id="csvData" style="overflow-x: auto;"></div>
-    </section>
-
-    <!-- Unique Selling Propositions (USPs) -->
-    <section style="margin-bottom: 40px;">
-      <h2 style="text-align: center;">3 Motivos para usares</h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-        <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
-          <div class="usp-icon">📊</div>
-          <h3>Estatisticas Detalhadas</h3>
-          <p>Tem acesso a info previligiada com estatísticas detalhadas da tua performance no Gran Turismo 7</p>
-        </div>
-        <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
-          <div class="usp-icon">👌</div>
-          <h3>Facil de Usar</h3>
-          <p>Esta ferramenta tem como objectivo simplificar o processo de acesso a info.</p>
-        </div>
-        <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
-          <div class="usp-icon">💸</div>
-          <h3>Grátis</h3>
-          <p>Todas as ferramentas que produzimos sao de acesso gratuito</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section style="margin-bottom: 40px;">
-      <h2 style="text-align: center;">Tertemunhos</h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px; display: flex; align-items: center;">
-          <div class="testimonial-img">👨</div>
-          <p>"Esta ferramenta ajudou-me a melhorar imenso as minhas habilidades de jogo. As estatísticas são precisas e fáceis de entender." - <strong>José Silva</strong></p>
-        </div>
-        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px; display: flex; align-items: center;">
-          <div class="testimonial-img">👨</div>
-          <p>"Adoro como a interface é fácil de usar. Consigo acompanhar facilmente o meu progresso e ver onde preciso de melhorar." - <strong>Igor Fraga</strong></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section style="margin-bottom: 40px; text-align: center;">
-      <h2>Estás pronto?</h2>
-      <p>Introduz o teu ID da PSN agora e comeca a explorar as suas estatísticas de jogo!</p>
-      <button onclick="document.getElementById('psnId').focus();" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer;">Escreve PSN ID</button>
     </section>
   </main>
 
