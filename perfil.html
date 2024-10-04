@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSN ID Form - Team RPM</title>
+  <script type="text/javascript">
+    function openGtgopher() {
+      var psnId = document.getElementById('psnId').value;
+      if (psnId) {
+        var url1 = 'http://gtgopher.ddns.net/current?psn=' + psnId;
+        window.open(url1, '_blank');
+      } else {
+        alert('Please enter your PSN ID.');
+      }
+    }
+
+    function openDgEdge() {
+      var psnId = document.getElementById('psnId').value;
+      if (psnId) {
+        var url2 = 'https://dg-edge.com/players/' + psnId;
+        window.open(url2, '_blank');
+      } else {
+        alert('Please enter your PSN ID.');
+      }
+    }
+  </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box;">
+
+  <!-- Header -->
+  <header style="background: #333; color: #fff; padding: 20px; text-align: center;">
+    <h1>Team RPM</h1>
+    <nav>
+      <a href="index.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Home</a>
+      <a href="about.html" style="color: #fff; margin: 0 15px; text-decoration: none;">About</a>
+      <a href="services.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Services</a>
+      <a href="contact.html" style="color: #fff; margin: 0 15px; text-decoration: none;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section style="background: url('hero-bg.jpg') no-repeat center center/cover; color: #fff; text-align: center; padding: 100px 20px;">
+    <h2>Enter Your PSN ID</h2>
+    <p>Get personalized insights and stats for your gaming performance.</p>
+  </section>
+
+  <!-- Main Content -->
+  <main style="padding: 20px;">
+    <!-- Explanation Block -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="text-align: center;">Why Enter Your PSN ID?</h2>
+      <p style="text-align: center; max-width: 800px; margin: auto;">
+        By entering your PSN ID, you will gain access to detailed statistics and insights about your gaming performance. Whether you're looking to improve your skills or just curious about your stats, our tools provide you with the information you need.
+      </p>
+    </section>
+
+    <!-- PSN ID Form -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="text-align: center;">Enter Your PSN ID</h2>
+      <form style="text-align: center;">
+        <label for="psnId" style="display: block; margin-bottom: 10px;">PSN ID:</label>
+        <input type="text" id="psnId" name="psnId" style="padding: 10px; width: 100%; max-width: 300px; margin-bottom: 10px;" />
+        <div>
+          <button type="button" onclick="openGtgopher()" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer; margin-right: 10px;">GTGOPHER</button>
+          <button type="button" onclick="openDgEdge()" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer;">DG-EDGE</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Unique Selling Propositions (USPs) -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="text-align: center;">Why Choose Us?</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
+          <h3>Accurate Stats</h3>
+          <p>Get the most accurate and up-to-date statistics for your gaming performance.</p>
+        </div>
+        <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
+          <h3>Easy to Use</h3>
+          <p>Our tools are designed to be user-friendly and easy to navigate.</p>
+        </div>
+        <div style="flex: 1 1 30%; background: #f4f4f4; margin: 10px; padding: 20px; text-align: center;">
+          <h3>Free Access</h3>
+          <p>All our tools and insights are available to you for free.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="text-align: center;">What Our Users Say</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px;">
+          <p>"This tool has helped me improve my gaming skills tremendously. The stats are accurate and easy to understand." - <strong>John Doe</strong></p>
+        </div>
+        <div style="flex: 1 1 45%; background: #f4f4f4; margin: 10px; padding: 20px;">
+          <p>"I love how user-friendly the interface is. I can easily track my progress and see where I need to improve." - <strong>Jane Smith</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="margin-bottom: 40px; text-align: center;">
+      <h2>Ready to Get Started?</h2>
+      <p>Enter your PSN ID now and start exploring your gaming stats!</p>
+      <button onclick="document.getElementById('psnId').focus();" style="padding: 10px 20px; background: #1E90FF; color: #fff; border: none; cursor: pointer;">Enter PSN ID</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: #333; color: #fff; text-align: center; padding: 20px;">
+    <p>&copy; 2024 Team RPM. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
