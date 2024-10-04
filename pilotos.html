@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -69,9 +69,9 @@
       const rows = document.querySelectorAll('#csvData table tbody tr');
       rows.forEach(row => {
         const cells = row.querySelectorAll('td');
-        const siglaMatch = cells[3].textContent.toLowerCase().includes(sigla); // Assuming "Sigla" is the 4th column
-        const statusMatch = cells[4].textContent.toLowerCase().includes(status); // Assuming "Estado" is the 5th column
-        const drMatch = cells[5].textContent.toLowerCase().includes(dr); // Assuming "DR" is the 6th column
+        const siglaMatch = cells[4].textContent.toLowerCase().includes(sigla); // Assuming "Sigla" is the 4th column
+        const statusMatch = cells[3].textContent.toLowerCase().includes(status); // Assuming "Estado" is the 5th column
+        const drMatch = cells[6].textContent.toLowerCase().includes(dr); // Assuming "DR" is the 6th column
 
         if (siglaMatch && statusMatch && drMatch) {
           row.style.display = '';
